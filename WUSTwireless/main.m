@@ -7,11 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "WWLoginCycler.h"
+
+
+NSMutableDictionary *getUsername2PwdMap() {
+    return [@{
+              
+              } mutableCopy];
+}
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        [[[WWLoginCycler alloc] initWithUsername2PwdMap:getUsername2PwdMap()] run];
+        
+        [[NSRunLoop currentRunLoop] run];
     }
     return 0;
 }

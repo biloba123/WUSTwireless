@@ -10,7 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^LoginCallback) (BOOL success, NSString *errorMsg);
+
 @interface WWZportal : NSObject
+
+- (void)loginWithUsername:(NSString *)username password:(NSString *)pwd callback:(nullable LoginCallback) callback;
 
 @end
 

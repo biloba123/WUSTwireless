@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WWLoginCycler : NSObject
 
+- (instancetype)initWithUsername2PwdMap:(NSDictionary *)map;
+
+- (void)run;
+
 @end
 
 NS_ASSUME_NONNULL_END
